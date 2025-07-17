@@ -1,3 +1,11 @@
+export const metadata = {
+  title: "Simple, Online, AI-Powered Mortgage | Better Mortgage",
+  description: "Calculate your mortgage easily with our AI-powered online tool.",
+  icons: {
+    icon: "/betterdotcom_logo.jpeg",
+  },
+};
+
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";

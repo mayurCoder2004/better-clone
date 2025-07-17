@@ -1,5 +1,7 @@
 "use client";
-import React from "react";
+
+import React, { useEffect } from "react";
+
 import MortgageCalculator from "../components/mortgage-components/MortgageCalculator";
 import Navbar from "../components/Navbar";
 import MonthlyBreakdown from "../components/mortgage-components/MonthlyBreakdown";
@@ -11,7 +13,7 @@ import MortgageInfo from "../components/mortgage-components/MortgageInfo";
 import HomeAffordability from "../components/mortgage-components/HomeAffordability";
 import Footer from "../components/Footer";
 
-const page = () => {
+const Page = () => {
   const breakdown = {
     total: 2146,
     principalInterest: 1517,
@@ -20,6 +22,16 @@ const page = () => {
     hoaFees: 132,
     utilities: 100,
   };
+
+  // ✅ Change tab title and favicon using useEffect
+  useEffect(() => {
+    document.title = "Mortgage Calculator | Better Mortgage";
+
+    const favicon = document.querySelector("link[rel='icon']");
+    if (favicon) {
+      favicon.href = "/betterdotcom_logo.jpeg";  // Replace with your favicon path
+    }
+  }, []);
 
   return (
     <div>
@@ -37,4 +49,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
